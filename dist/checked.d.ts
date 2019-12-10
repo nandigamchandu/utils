@@ -1,0 +1,14 @@
+import { Mixed, TupleC, TypeOf } from 'io-ts';
+export declare function tupleChecked<T extends [Mixed, ...Mixed[]], A extends TypeOf<TupleC<T>> & any[], R extends Mixed>(argSpecs: TupleC<T>, resultSpec: R, f: (...args: A) => TypeOf<R>): typeof f;
+export declare function checked<A extends Mixed, B extends Mixed, C extends Mixed, D extends Mixed, E extends Mixed, R extends Mixed>(codecs: [A, B, C, D, E], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => TypeOf<R>): typeof f;
+export declare function checked<A extends Mixed, B extends Mixed, C extends Mixed, D extends Mixed, R extends Mixed>(codecs: [A, B, C, D], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => TypeOf<R>): typeof f;
+export declare function checked<A extends Mixed, B extends Mixed, C extends Mixed, R extends Mixed>(codecs: [A, B, C], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => TypeOf<R>): typeof f;
+export declare function checked<A extends Mixed, B extends Mixed, R extends Mixed>(codecs: [A, B], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => TypeOf<R>): typeof f;
+export declare function checked<A extends Mixed, R extends Mixed>(codecs: [A], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => TypeOf<R>): typeof f;
+export declare function tupleCheckedAsync<T extends [Mixed, ...Mixed[]], A extends TypeOf<TupleC<T>> & any[], R extends Mixed>(argSpecs: TupleC<T>, resultSpec: R, f: (...args: A) => Promise<TypeOf<typeof resultSpec>>): typeof f;
+export declare function checkedAsync<A extends Mixed, B extends Mixed, C extends Mixed, D extends Mixed, E extends Mixed, R extends Mixed>(codecs: [A, B, C, D, E], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => Promise<TypeOf<R>>): typeof f;
+export declare function checkedAsync<A extends Mixed, B extends Mixed, C extends Mixed, D extends Mixed, R extends Mixed>(codecs: [A, B, C, D], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => Promise<TypeOf<R>>): typeof f;
+export declare function checkedAsync<A extends Mixed, B extends Mixed, C extends Mixed, R extends Mixed>(codecs: [A, B, C], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => Promise<TypeOf<R>>): typeof f;
+export declare function checkedAsync<A extends Mixed, B extends Mixed, R extends Mixed>(codecs: [A, B], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => Promise<TypeOf<R>>): typeof f;
+export declare function checkedAsync<A extends Mixed, R extends Mixed>(codecs: [A], resultSpec: R, f: (...args: TypeOf<TupleC<typeof codecs>> & any[]) => Promise<TypeOf<R>>): typeof f;
+//# sourceMappingURL=checked.d.ts.map

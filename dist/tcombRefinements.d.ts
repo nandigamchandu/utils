@@ -1,0 +1,22 @@
+import t from 'tcomb';
+export declare const Positive: t.Refinement<number>;
+export declare const Negative: t.Refinement<number>;
+export declare function Min(min: number): t.Refinement<number>;
+export declare function Max(max: number): t.Refinement<number>;
+export declare const PositiveInt: t.Refinement<number>;
+export declare const NegativeInt: t.Refinement<number>;
+export declare function MinInt(min: number): t.Refinement<number>;
+export declare function MaxInt(max: number): t.Refinement<number>;
+export declare const Email: t.Refinement<string>;
+export declare const Url: t.Refinement<string>;
+export declare const Lower: t.Refinement<string>;
+export declare const Upper: t.Refinement<string>;
+export declare function Length(len: number): t.Refinement<string>;
+export declare function MinStringLength(min: number): t.Refinement<string>;
+export declare function MaxStringLength(max: number): t.Refinement<string>;
+export declare function Literal(literal: string): t.Refinement<string>;
+export declare function MinDate(min: Date): t.Refinement<Date>;
+export declare function MaxDate(max: Date): t.Refinement<Date>;
+export declare function ArrayMinLength(min: number): t.Refinement<any[]>;
+export declare function ArrayMaxLength(max: number): t.Refinement<any[]>;
+//# sourceMappingURL=tcombRefinements.d.ts.map
